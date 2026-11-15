@@ -39,4 +39,5 @@ table:
     [0,1,x,y,' ']: {R: q5}
 
   qaccept:
+  
   qreject:
