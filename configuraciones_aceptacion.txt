@@ -1,0 +1,19 @@
+Especificacion: especificacion_aceptacion.txt
+Cadena de entrada: w = 0011
+
+q1 0011
+x q2 011
+x0 q2 11
+x q3 0y1
+q3 x0y1
+x q1 0y1
+xx q2 y1
+xxy q2 1
+xx q3 yy
+x q3 xyy
+xx q1 yy
+xxy q4 y
+xxyy q4 ⊔
+xxyy⊔ qaccept
+
+Resultado: M acepta w. Se llego a la configuracion de aceptacion en 13 pasos.
