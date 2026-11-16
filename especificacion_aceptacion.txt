@@ -1,0 +1,42 @@
+# M reconoce L = {0^n 1^n | n >= 1}. Cicla si la cadena empieza con 1.
+estados: q1 q2 q3 q4 q5 q6 qaccept qreject
+alfabeto_entrada: 0 1
+alfabeto_cinta: 0 1 x y _
+blanco: _
+estado_inicial: q1
+estado_aceptacion: qaccept
+estado_rechazo: qreject
+
+transiciones:
+q1 0 q2 x R
+q1 y q4 y R
+q1 1 q5 1 R
+q1 _ qreject _ R
+q1 x qreject x R
+q2 0 q2 0 R
+q2 y q2 y R
+q2 1 q3 y L
+q2 _ qreject _ R
+q2 x qreject x R
+q3 0 q3 0 L
+q3 y q3 y L
+q3 x q1 x R
+q3 1 qreject 1 R
+q3 _ qreject _ R
+q4 y q4 y R
+q4 _ qaccept _ R
+q4 0 qreject 0 R
+q4 1 qreject 1 R
+q4 x qreject x R
+q5 0 q6 0 L
+q5 1 q6 1 L
+q5 x q6 x L
+q5 y q6 y L
+q5 _ q6 _ L
+q6 0 q5 0 R
+q6 1 q5 1 R
+q6 x q5 x R
+q6 y q5 y R
+q6 _ q5 _ R
+
+cadena: 0011

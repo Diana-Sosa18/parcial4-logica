@@ -1,0 +1,19 @@
+q1 10
+1 q5 0
+q6 10
+1 q5 0
+q6 10
+1 q5 0
+q6 10
+1 q5 0
+q6 10
+1 q5 0
+q6 10
+1 q5 0
+q6 10
+1 q5 0
+q6 10
+1 q5 0
+q6 10
+
+Resultado: Ciclo infinito confirmado (período 2). Detenida tras al menos 15 movimientos dentro del ciclo. Pasos totales: 16.

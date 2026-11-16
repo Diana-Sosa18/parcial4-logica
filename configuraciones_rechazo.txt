@@ -1,0 +1,11 @@
+q1 001
+x q2 01
+x0 q2 1
+x q3 0y
+q3 x0y
+x q1 0y
+xx q2 y
+xxy q2 ⊔
+xxy⊔ qreject ⊔
+
+Resultado: La máquina rechaza. Pasos totales: 8.

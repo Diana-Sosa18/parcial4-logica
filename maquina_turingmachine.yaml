@@ -1,0 +1,45 @@
+# Exportación para turingmachine.io
+# En Pygame, la primera celda es el límite izquierdo de la cinta.
+# La web permite cinta hacia ambos lados; los ejemplos incluidos no cruzan ese borde.
+input: '0011'
+blank: ' '
+start state: 'q1'
+table:
+  'q1':
+    '0': {write: 'x', R: 'q2'}
+    'y': {write: 'y', R: 'q4'}
+    '1': {write: '1', R: 'q5'}
+    ' ': {write: ' ', R: 'qreject'}
+    'x': {write: 'x', R: 'qreject'}
+  'q2':
+    '0': {write: '0', R: 'q2'}
+    'y': {write: 'y', R: 'q2'}
+    '1': {write: 'y', L: 'q3'}
+    ' ': {write: ' ', R: 'qreject'}
+    'x': {write: 'x', R: 'qreject'}
+  'q3':
+    '0': {write: '0', L: 'q3'}
+    'y': {write: 'y', L: 'q3'}
+    'x': {write: 'x', R: 'q1'}
+    '1': {write: '1', R: 'qreject'}
+    ' ': {write: ' ', R: 'qreject'}
+  'q4':
+    'y': {write: 'y', R: 'q4'}
+    ' ': {write: ' ', R: 'qaccept'}
+    '0': {write: '0', R: 'qreject'}
+    '1': {write: '1', R: 'qreject'}
+    'x': {write: 'x', R: 'qreject'}
+  'q5':
+    '0': {write: '0', L: 'q6'}
+    '1': {write: '1', L: 'q6'}
+    'x': {write: 'x', L: 'q6'}
+    'y': {write: 'y', L: 'q6'}
+    ' ': {write: ' ', L: 'q6'}
+  'q6':
+    '0': {write: '0', R: 'q5'}
+    '1': {write: '1', R: 'q5'}
+    'x': {write: 'x', R: 'q5'}
+    'y': {write: 'y', R: 'q5'}
+    ' ': {write: ' ', R: 'q5'}
+  'qaccept':
+  'qreject':
