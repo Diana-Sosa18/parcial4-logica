@@ -1,6 +1,3 @@
-Especificacion: especificacion_ciclo.txt
-Cadena de entrada: w = 10
-
 q1 10
 1 q5 0
 q6 10
@@ -53,4 +50,4 @@ q6 10
 1 q5 0
 q6 10
 
-Resultado: M no se detuvo en 50 pasos, no llego a qaccept ni a qreject. Se toma como ciclo infinito.
+Resultado: Se alcanzó el límite de 50 pasos. La máquina no ha aceptado ni rechazado. Puede existir un ciclo infinito, pero el límite no lo demuestra.
