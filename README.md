@@ -1,5 +1,5 @@
 # Máquina de Turing integrada con Pygame
-
+![diagrama](image.png)
 Aplicación de escritorio que reúne la lectura, validación, simulación y salida
 del proyecto. Su visualizador permite inspeccionar la cinta, el estado actual
 y la próxima transición, con controles inspirados en https://turingmachine.io/.
