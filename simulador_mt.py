@@ -58,6 +58,8 @@ if __name__ == "__main__":
 
     def imprimir_configuracion():
         u, q, v = m.configuracion()
+        if m.detenida() and v == m.blanco:
+            v = ""
         partes = [u.replace(m.blanco, "⊔"), q, v.replace(m.blanco, "⊔")]
         print(" ".join(x for x in partes if x))
 
